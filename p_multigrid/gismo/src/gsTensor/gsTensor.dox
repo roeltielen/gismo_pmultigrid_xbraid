@@ -1,0 +1,10 @@
+namespace gismo {
+
+/** \defgroup Tensor Tensor module
+
+    This module is responsible for dimension-independent operations on
+    tensor structures and tensor-product bases.
+
+*/
+
+}

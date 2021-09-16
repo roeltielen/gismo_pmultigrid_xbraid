@@ -1,0 +1,10 @@
+namespace gismo {
+
+/** \defgroup Modeling Modeling module
+
+    This module implements geometric and modeling operations for
+    solids and point-clouds.
+
+*/
+
+}
