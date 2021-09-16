@@ -1,8 +1,8 @@
 # Introduction
  
-This README file contains a description to obtain the results presented in [2]. In particular, the 'pMultigridexample' and 'xbraid_heatEquation_example' are discussed, which can be found in the 'p_multigrid' and 'xbraid' folder, respectively.  
+This README file contains a description to obtain the results presented in [1]. In particular, the 'pMultigridexample' and 'xbraid_heatEquation_example' are discussed, which can be found in the 'p_multigrid' and 'xbraid' folder, respectively.  
 
-The remainder of this README file is similar to chapter 7 of [2].
+The remainder of this README file is similar to chapter 7 of [1].
 
 # pMultigrid
 In both examples, we consider the *p*-multigrid method as considered in [1, 2]. *p*-multigrid methods are a class of iterative solvers that use a low-order correction to update the high-order solution.  At each level of the hierarchy, a basic iterative method (e.g.  Gauss-Seidel,ILUT) is applied which results in an overall highly efficient method.  Figure 1 illustrates a single iteration of a *p*-multigrid method.
@@ -101,10 +101,10 @@ one can obtain the results for different discretizations. It should be noted tha
 ![GitHub Logo](images/results2.png)
 
  ## Bibliography
- 
- [1]  R. Tielen, M. M&ouml;ller, D. G&ouml;ddeke, C. Vuik, *p*-multigrid methods and their comparisonto h-multigrid methods within Isogeometric Analysis, *Computer Methods in AppliedMechanics and Engineering*, Volume 372, 2020
- 
- [2]  R. Tielen, *p*-multigrid methods for Isogeometric Analysis, *PhD thesis*, 2021
+
+ [1]  R. Tielen, *p*-multigrid methods for Isogeometric Analysis, *PhD thesis*, 2021
+
+ [2]  R. Tielen, M. M&ouml;ller, D. G&ouml;ddeke, C. Vuik, *p*-multigrid methods and their comparisonto h-multigrid methods within Isogeometric Analysis, *Computer Methods in Applied Mechanics and Engineering*, Volume 372, 2020
  
  [3]  R. Tielen, M. M&ouml;ller, C. Vuik, A Direct Projection to Low-Order Level for *p*-Multigrid Methods in Isogeometric Analysis, *Lecture  Notes  in  Computational Science and Engineering: Numerical Mathematics and Advanced Applications ENUMATH 2019*, 2021
   
