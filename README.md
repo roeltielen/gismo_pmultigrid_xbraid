@@ -48,7 +48,13 @@ All other parameters and their meaning are provided in the table below.
 ## Example (pMultigridexample)
   
 As an example, one can run the following code in the terminal:
-  
+
+**$ mkdir gismo_build_pmultigrid**
+
+**$ cd gismo_build_pmultigrid**
+
+**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14
+ 
 **$./bin/pMultigridexample -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
   
 This would lead to the following output on the terminal:
@@ -66,9 +72,15 @@ one can obtain the results for different discretizations. Table 1 shows the resu
  
 ## Example (xbraid_heatEquation_example)
 
-In a similar way, results obtained with MGRIT can be obtained as well. The corresponding source file xbraid_heatEquation_example can be found in the following way:
+In a similar way, results obtained with MGRIT can be obtained as well in the following way:
 
-**$ cd extensions/gsXbraid/examples**
+**$ mkdir gismo_build_xbraid**
+
+**$ cd gismo_build_xbraid**
+
+**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14 -DGISMO_WITH_MPI=ON -DGISMO_WITH_XBRAID=ON
+
+**$ make xbraid_heatEquation_example**
 
 One can then run the following code in the terminal:
 
