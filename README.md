@@ -53,7 +53,7 @@ As an example, one can run the following code in the terminal:
 
 **$ cd gismo_build_pmultigrid**
 
-**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14**
+**$ cmake ../p_multigrid/gismo/ -DCMAKE_CXX_STANDARD=14**
  
 **$./bin/pMultigridexample -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
   
