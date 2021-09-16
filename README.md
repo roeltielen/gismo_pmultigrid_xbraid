@@ -40,7 +40,7 @@ All other parameters and their meaning are provided in the table below.
  
   ![GitHub Logo](images/table.png)
   
-## Example
+## Example (pMultigridexample)
   
 As an example, one can run the following code in the terminal:
   
@@ -59,6 +59,28 @@ one can obtain the results for different discretizations. Table 1 shows the resu
  ![GitHub Logo](images/results.png)
  
  
+## Example (xbraid_heatEquation_example)
+
+In a similar way, results obtained with MGRIT can be obtained as well. The corresponding source file xbraid_heatEquation_example can be found in the following way:
+
+**$ cd extensions/gsXbraid/examples**
+
+One can then run the following code in the terminal:
+
+**$ ./bin/xbraid_heatEquation_example -n 100 -i 2 -r 4**
+
+This command runs the MGRIT method adopting 100 time steps, a refinement level of 4 and spline degree equal to 2. The obtained output provides all the details with respect to the settings of the MGRIT method and the p-multigrid method. A part of the output shows the convergence of the MGRIT method:
+
+![GitHub Logo](images/output2.png)
+
+By typing
+
+**$ ./bin/xbraid_heatEquation_example -n \<INT\> -i \<INT\> -r \<INT\>**
+
+one can obtain the results for different discretizations. It should be noted that this example makes use of an XML-file (heat2d_square_ibvp1.xml) which provides all the MGRIT and p-multigrid settings and should be adjusted accordingly. The table below shows the results for different values of p and h which can be reproduced in this example. Here, the red colored 9 is the result corresponding to the output above.
+
+![GitHub Logo](images/results2.png)
+
  ## Bibliography
  
  [1]  R. Tielen, M. M&ouml;ller, D. G&ouml;ddeke, C. Vuik, *p*-multigrid methods and their comparisonto h-multigrid methods within Isogeometric Analysis, *Computer Methods in AppliedMechanics and Engineering*, Volume 372, 2020
