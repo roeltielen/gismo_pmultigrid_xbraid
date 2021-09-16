@@ -53,7 +53,7 @@ As an example, one can run the following code in the terminal:
 
 **$ cd gismo_build_pmultigrid**
 
-**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14
+**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14**
  
 **$./bin/pMultigridexample -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
   
@@ -78,7 +78,7 @@ In a similar way, results obtained with MGRIT can be obtained as well in the fol
 
 **$ cd gismo_build_xbraid**
 
-**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14 -DGISMO_WITH_MPI=ON -DGISMO_WITH_XBRAID=ON
+**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14 -DGISMO_WITH_MPI=ON -DGISMO_WITH_XBRAID=ON**
 
 **$ make xbraid_heatEquation_example**
 
