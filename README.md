@@ -57,7 +57,7 @@ As an example, one can run the following code in the terminal:
 
 **$ make pMultigrid_example**
  
-**$./bin/pMultigridexample -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
+**$ ./bin/pMultigrid_example -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
   
 This would lead to the following output on the terminal:
   
