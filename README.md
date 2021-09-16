@@ -11,7 +11,7 @@ In both examples, we consider the *p*-multigrid method as considered in [1, 2]. 
  
 As a model problem, we consider the convection-diffusion-reaction (CDR) equation, where  Dirichlet  (essential)  and  Neumann  (natural)  boundary  conditions  can be prescribed,  respectively. 
  
-In this tutorial we will explain how one can use a *p*-multigrid method to solve this model problem. We will explain how one can define the benchmark problem, set-up the *p*-multigrid method and adjust it to your own preference. More information can be found in [1] and [2].
+In this tutorial we will explain how one can use a *p*-multigrid method to solve this model problem. We will explain how one can define the benchmark problem, set-up the *p*-multigrid method and adjust it to your own preference. More information can be found in [1] and [2]. Furthermore, we will discuss an example where *p*-multigrid methods are combined with Multigrid Reduced in Time (MGRIT) methods for time-dependent problems. 
  
 Most of the parameters required to define the model problem and *p*-multigrid method can be provided via the command-line. Alternatively, one can adjust them in the main file, but this requires (re)-compiling the code. In the following, we will briefly discuss the different command-line arguments.
  
