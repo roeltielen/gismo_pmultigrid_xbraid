@@ -17,7 +17,7 @@ Most of the parameters required to define the model problem and *p*-multigrid me
  
 ## Benchmark
  
-Using the argument **-b \<INT\>** one can choose the considered benchmark problem.  Eachproblem  is  defined  by  the  exact  solution  ’solutionexact’,  considered  right  hand  side ’rhsexact’ and the underlying geometry ’geo’.  In total, five benchmarks can be adopted, but new ones can easily be added by the user. Typing **-b 2** in the command line leads for example to:
+Using the argument **-b "INT"** one can choose the considered benchmark problem.  Eachproblem  is  defined  by  the  exact  solution  ’solutionexact’,  considered  right  hand  side ’rhsexact’ and the underlying geometry ’geo’.  In total, five benchmarks can be adopted, but new ones can easily be added by the user. Typing **-b 2** in the command line leads for example to:
   
 ![GitHub Logo](images/code.png)
  
