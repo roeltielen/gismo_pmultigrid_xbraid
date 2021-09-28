@@ -1,8 +1,8 @@
 # Introduction
  
-This README file contains a description to obtain the results presented in [1]. In particular, the **pMultigrid_example** and **xbraid_heatEquation_example** are discussed, which can be found in the *p_multigrid* and *xbraid* folder, respectively.  
+This README file contains a description to obtain the results presented in [1]. In particular, the **pMultigrid\_example** and **xbraid\_heatEquation\_example** are discussed, which can be found in the *p\_multigrid* and *xbraid* folder, respectively.  
 
-The file starts with a general description of *p*-multigrid methods and then briefly discusses all arguments that can be provided by the user, after which both the **pMultigrid_example** and **xbraid_heatEquation_example** are discussed in more detail. Please note that this README file shows many similarities with chapter 7 of [1].
+The file starts with a general description of *p*-multigrid methods and then briefly discusses all arguments that can be provided by the user, after which both the **pMultigrid\_example** and **xbraid\_heatEquation\_example** are discussed in more detail. Please note that this README file shows many similarities with chapter 7 of [1].
 
 # *p*-multigrid
 In both examples, we consider the *p*-multigrid method as presented in [1,2]. *p*-multigrid methods are a class of iterative solvers that use a low-order correction to update the high-order solution.  At each level of the hierarchy, a basic iterative method (e.g. Gauss-Seidel, ILUT) is applied which results in an overall efficient method. Figure 1 illustrates a single iteration of a *p*-multigrid method.
@@ -15,7 +15,7 @@ Most of the parameters required to define the model problem and *p*-multigrid me
  
 ## Benchmark
  
-Using the argument **-b "INT"** one can choose the considered benchmark problem. Each problem is defined by the exact solution *solution_exact*,  considered right-hand side *rhs_exact* and the underlying geometry *geo*.  In total, five benchmarks can be adopted, but new ones can easily be added by the user. Typing **-b 2** in the command line leads for example to:
+Using the argument **-b "INT"** one can choose the considered benchmark problem. Each problem is defined by the exact solution *solution\_exact*,  considered right-hand side *rhs\_exact* and the underlying geometry *geo*.  In total, five benchmarks can be adopted, but new ones can easily be added by the user. Typing **-b 2** in the command line leads for example to:
   
 ![GitHub Logo](images/code.png)
  
@@ -43,19 +43,19 @@ All other parameters and their meaning are provided in the table below.
  
   ![GitHub Logo](images/table.png)
   
-## Example (pMultigrid_example)
+## Example (pMultigrid\_example)
   
 As an example, one can run the following code in the terminal:
 
-**$ mkdir gismo_build_pmultigrid**
+**$ mkdir gismo\_build\_pmultigrid**
 
-**$ cd gismo_build_pmultigrid**
+**$ cd gismo\_build\_pmultigrid**
 
-**$ cmake ../p_multigrid/gismo/ -DCMAKE_CXX_STANDARD=14**
+**$ cmake ../p\_multigrid/gismo/ -DCMAKE\_CXX\_STANDARD=14**
 
-**$ make pMultigrid_example**
+**$ make pMultigrid\_example**
  
-**$ ./bin/pMultigrid_example -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
+**$ ./bin/pMultigrid\_example -p 2 -r 6 -l 4 -S 1 -b 2 -z "hhp"**
   
 This would lead to the following output on the terminal:
   
@@ -63,28 +63,28 @@ This would lead to the following output on the terminal:
   
 Hence, Poisson’s equation is solved on a quarter annulus using a *p*-multigrid method combined with an ILUT  smoother. Of course, the times shown in the example  above differ from device to device. Note that the output in the terminal describes the benchmark problem, the *p*-multigrid hierarchy and details about the solver. By typing
   
-**$./bin/pMultigrid_example -p "INT" -r "INT" -l "INT" -S "INT" -b 2 -z "STRING"**
+**$./bin/pMultigrid\_example -p "INT" -r "INT" -l "INT" -S "INT" -b 2 -z "STRING"**
   
 one can obtain the results for different discretizations. Table 1 shows the results for different values of *p* and *h* which can be reproduced by varying the different parameters in the terminal. The red colored 4 is the result corresponding to the output above.
   
  ![GitHub Logo](images/results.png)
  
  
-## Example (xbraid_heatEquation_example)
+## Example (xbraid\_heatEquation\_example)
 
 In a similar way, results obtained with MGRIT can be obtained as well in the following way:
 
-**$ mkdir gismo_build_xbraid**
+**$ mkdir gismo\_build\_xbraid**
 
-**$ cd gismo_build_xbraid**
+**$ cd gismo\_build\_xbraid**
 
-**$ cmake ../xbraid/gismo/ -DCMAKE_CXX_STANDARD=14 -DGISMO_WITH_MPI=ON -DGISMO_WITH_XBRAID=ON**
+**$ cmake ../xbraid/gismo/ -DCMAKE\_CXX\_STANDARD=14 -DGISMO\_WITH\_MPI=ON -DGISMO\_WITH\_XBRAID=ON**
 
-**$ make xbraid_heatEquation_example**
+**$ make xbraid\_heatEquation_example**
 
 One can then run the following code in the terminal:
 
-**$ mpirun -np 4 ./bin/xbraid_heatEquation_example -n 100 -i 2 -r 4**
+**$ mpirun -np 4 ./bin/xbraid\_heatEquation_example -n 100 -i 2 -r 4**
 
 This command runs the MGRIT method (using 4 processors) adopting 100 time steps, a refinement level of 4 and spline degree equal to 2. The obtained output provides all the details with respect to the settings of the MGRIT method and the *p*-multigrid method. A part of the output shows the convergence of the MGRIT method:
 
@@ -92,7 +92,7 @@ This command runs the MGRIT method (using 4 processors) adopting 100 time steps,
 
 By typing
 
-**$ mpirun -np 4 ./bin/xbraid_heatEquation_example -n "INT" -i "INT" -r "INT"**
+**$ mpirun -np 4 ./bin/xbraid\_heatEquation\_example -n "INT" -i "INT" -r "INT"**
 
 one can obtain the results for different discretizations. It should be noted that this example makes use of an XML-file (heat2d_square_ibvp1.xml) which provides all the MGRIT and *p*-multigrid settings and should be adjusted accordingly. The table below shows the results for different values of *p* and *h* which can be reproduced in this example. Here, the red colored 9 is the result corresponding to the output above.
 
