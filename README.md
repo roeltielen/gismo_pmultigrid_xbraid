@@ -80,11 +80,11 @@ In a similar way, results obtained with MGRIT can be obtained as well in the fol
 
 **$ cmake ../xbraid/gismo/ -DCMAKE\_CXX\_STANDARD=14 -DGISMO\_WITH\_MPI=ON -DGISMO\_WITH\_XBRAID=ON**
 
-**$ make xbraid\_heatEquation_example**
+**$ make xbraid\_heatEquation\_example**
 
 One can then run the following code in the terminal:
 
-**$ mpirun -np 4 ./bin/xbraid\_heatEquation_example -n 100 -i 2 -r 4**
+**$ mpirun -np 4 ./bin/xbraid\_heatEquation\_example -n 100 -i 2 -r 4**
 
 This command runs the MGRIT method (using 4 processors) adopting 100 time steps, a refinement level of 4 and spline degree equal to 2. The obtained output provides all the details with respect to the settings of the MGRIT method and the *p*-multigrid method. A part of the output shows the convergence of the MGRIT method:
 
