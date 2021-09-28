@@ -5,7 +5,7 @@ This README file contains a description to obtain the results presented in [1]. 
 The file starts with a general description of *p*-multigrid methods and then briefly discusses all arguments that can be provided by the user, after which both the **pMultigrid_example** and **xbraid_heatEquation_example** are discussed in more detail. Please note that this README file shows many similarities with chapter 7 of [1].
 
 # *p*-multigrid
-In both examples, we consider the *p*-multigrid method as presented in [1,2]. *p*-multigrid methods are a class of iterative solvers that use a low-order correction to update the high-order solution.  At each level of the hierarchy, a basic iterative method (e.g.  Gauss-Seidel,ILUT) is applied which results in an overall efficient method. Figure 1 illustrates a single iteration of a *p*-multigrid method.
+In both examples, we consider the *p*-multigrid method as presented in [1,2]. *p*-multigrid methods are a class of iterative solvers that use a low-order correction to update the high-order solution.  At each level of the hierarchy, a basic iterative method (e.g. Gauss-Seidel, ILUT) is applied which results in an overall efficient method. Figure 1 illustrates a single iteration of a *p*-multigrid method.
  
 ![GitHub Logo](images/p_multigrid.png)
  
@@ -15,7 +15,7 @@ Most of the parameters required to define the model problem and *p*-multigrid me
  
 ## Benchmark
  
-Using the argument **-b "INT"** one can choose the considered benchmark problem.  Each problem  is  defined  by  the  exact  solution  ’solution_exact’,  considered  right  hand  side ’rhs_exact’ and the underlying geometry ’geo’.  In total, five benchmarks can be adopted, but new ones can easily be added by the user. Typing **-b 2** in the command line leads for example to:
+Using the argument **-b "INT"** one can choose the considered benchmark problem. Each problem is defined by the exact solution *solution_exact*,  considered right-hand side *rhs_exact* and the underlying geometry *geo*.  In total, five benchmarks can be adopted, but new ones can easily be added by the user. Typing **-b 2** in the command line leads for example to:
   
 ![GitHub Logo](images/code.png)
  
