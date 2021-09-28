@@ -1,6 +1,6 @@
 # Introduction
  
-This README file contains a description to obtain the results presented in [1]. In particular, the 'pMultigrid_example' and 'xbraid_heatEquation_example' are discussed, which can be found in the 'p_multigrid' and 'xbraid' folder, respectively.  
+This README file contains a description to obtain the results presented in [1]. In particular, the **pMultigrid_example** and **xbraid_heatEquation_example** are discussed, which can be found in the 'p_multigrid' and 'xbraid' folder, respectively.  
 
 The file starts with a general description of *p*-multigrid methods and then briefly discusses all arguments that can be provided by the user, after which both the 'pMultigrid_example' and 'xbraid_heatEquation_example' are discussed in more detail. Please not that this README file shows many similarities with chapter 7 of [1].
 
