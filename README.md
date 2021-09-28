@@ -33,7 +33,7 @@ The considered *p*-multigrid in Figure 1 is based on applying *h*-coarsening twi
   
 In case a so-called direct projection [3] is adopted, the user should still provide the number  of  levels  and  coarsening  strategy  as  shown  above. The *p*-multigrid  hierarchy based on a direct projection will be formed internally by providing the argument **-D 1**, see the next section for more information. 
   
-## p-multigrid options
+## *p*-multigrid options
  
 The number of smoothing steps adopted within the *p*-multigrid method is defined by **-v "INT"**. It should be noted that the type of smoother chosen by **-S "INT"** is only used at high-order levels. At level p=1, Gauss-Seidel is always adopted as a smoother. One could adjust the *p*-multigrid method as follows:
   
