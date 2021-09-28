@@ -35,7 +35,7 @@ In case a so-called direct projection [3] is adopted, the user should still prov
   
 ## *p*-multigrid options
  
-The number of smoothing steps adopted within the *p*-multigrid method is defined by **-v "INT"**. It should be noted that the type of smoother chosen by **-S "INT"** is only used at high-order levels. At level p=1, Gauss-Seidel is always adopted as a smoother. One could adjust the *p*-multigrid method as follows:
+The number of smoothing steps adopted within the *p*-multigrid method is defined by **-v "INT"**. It should be noted that the type of smoother chosen by **-S "INT"** is only used at high-order levels. At level *p=1*, Gauss-Seidel is always adopted as a smoother. One could adjust the *p*-multigrid method as follows:
   
 **-s 1 -S 1 -D 1 -L 1 -d 1**
   
@@ -86,7 +86,7 @@ One can then run the following code in the terminal:
 
 **$ mpirun -np 4 ./bin/xbraid_heatEquation_example -n 100 -i 2 -r 4**
 
-This command runs the MGRIT method (using 4 processors) adopting 100 time steps, a refinement level of 4 and spline degree equal to 2. The obtained output provides all the details with respect to the settings of the MGRIT method and the p-multigrid method. A part of the output shows the convergence of the MGRIT method:
+This command runs the MGRIT method (using 4 processors) adopting 100 time steps, a refinement level of 4 and spline degree equal to 2. The obtained output provides all the details with respect to the settings of the MGRIT method and the *p*-multigrid method. A part of the output shows the convergence of the MGRIT method:
 
 ![GitHub Logo](images/output2.png)
 
@@ -94,7 +94,7 @@ By typing
 
 **$ mpirun -np 4 ./bin/xbraid_heatEquation_example -n "INT" -i "INT" -r "INT"**
 
-one can obtain the results for different discretizations. It should be noted that this example makes use of an XML-file (heat2d_square_ibvp1.xml) which provides all the MGRIT and p-multigrid settings and should be adjusted accordingly. The table below shows the results for different values of p and h which can be reproduced in this example. Here, the red colored 9 is the result corresponding to the output above.
+one can obtain the results for different discretizations. It should be noted that this example makes use of an XML-file (heat2d_square_ibvp1.xml) which provides all the MGRIT and *p*-multigrid settings and should be adjusted accordingly. The table below shows the results for different values of *p* and *h* which can be reproduced in this example. Here, the red colored 9 is the result corresponding to the output above.
 
 ![GitHub Logo](images/results2.png)
 
