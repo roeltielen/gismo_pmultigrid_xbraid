@@ -21,13 +21,13 @@ Using the argument **-b "INT"** one can choose the considered benchmark problem.
   
 ![GitHub Logo](images/code.png)
  
-A  second  argument, **-P \<INT\>** defines  the  number  of  patches  considered. Starting from a single patch geometry, the geometry is split uniformly in each direction P times, with a maximum of 4 (= 64 patches). The benchmark problem above, where the geometry consists of 4 patches can thus be defined as follows:
+A  second  argument, **-P "INT"** defines  the  number  of  patches  considered. Starting from a single patch geometry, the geometry is split uniformly in each direction P times, with a maximum of 4 (= 64 patches). The benchmark problem above, where the geometry consists of 4 patches can thus be defined as follows:
   
  **-b 2 -P 2**
  
 ## p-multigrid hierarchy
   
-To set up the *p*-multigrid hierarchy, one first has to define the high-order discretization by  defining  the  degree  of  the  B-spline  basis  functions  and  the  refinement  level  by  the command line  arguments **-p \<INT\>** and **-r \<INT\>**,  respectively. Then, a *p*-multigrid hierarchy  is  created  by  setting  the  number  of  levels  in  the  multigrid  hierarchy  (using **-l \<INT\>**) and the coarsening strategy **-z \<STRING\>**. The string should have length **l−1** and defines if *p*-coarsening (”p”) or *h*-coarsening should be applied (”h”). From left to right, the string starts with the coarsest level and ends with the finest one. 
+To set up the *p*-multigrid hierarchy, one first has to define the high-order discretization by  defining  the  degree  of  the  B-spline  basis  functions  and  the  refinement  level  by  the command line  arguments **-p "INT"** and **-r "INT"**,  respectively. Then, a *p*-multigrid hierarchy  is  created  by  setting  the  number  of  levels  in  the  multigrid  hierarchy  (using **-l "INT"**) and the coarsening strategy **-z "STRING"**. The string should have length **l−1** and defines if *p*-coarsening (”p”) or *h*-coarsening should be applied (”h”). From left to right, the string starts with the coarsest level and ends with the finest one. 
   
 The considered *p*-multigrid in Figure 1 is based on applying *h*-coarsening twice followed by applying *p*-coarsening twice afterwards and can be defined as follows:
   
@@ -37,7 +37,7 @@ In case a so-called direct projection [3] is adopted, the user should still prov
   
 ## p-multigrid options
  
-The  number  of  smoothing  steps  adopted  within  the *p*-multigrid  method  is  defined  by **-v \<INT\>**. It should be noted that the type of smoother chosen by **-S \<INT\>** is only used at high-order levels.  At level p=1, Gauss-Seidel is always adopted as a smoother. One could adjust the *p*-multigrid method as follows:
+The  number  of  smoothing  steps  adopted  within  the *p*-multigrid  method  is  defined  by **-v "INT"**. It should be noted that the type of smoother chosen by **-S "INT"** is only used at high-order levels.  At level p=1, Gauss-Seidel is always adopted as a smoother. One could adjust the *p*-multigrid method as follows:
   
 **-s 1 -S 1 -D 1 -L 1 -d 1**
   
@@ -65,7 +65,7 @@ This would lead to the following output on the terminal:
   
 Hence,  Poisson’s  equation  is  solved  on  a  quarter  annulus  using  a *p*-multigrid  method combined  with  an  ILUT  smoother. Of  course,  the  times  shown  in  the  example  above differ from device to device. Note that the output in the terminal describes the benchmark problem, the *p*-multigrid hierarchy and details about the solver. By typing
   
-**$./bin/pMultigridexample -p \<INT\> -r \<INT\> -l \<INT\> -S \<INT\> -b 2 -z \<STRING\>**
+**$./bin/pMultigridexample -p "INT" -r "INT" -l "INT" -S "INT" -b 2 -z "STRING"**
   
 one can obtain the results for different discretizations. Table 1 shows the results for different values of *p* and *h* which can be reproduced by varying the different parameters in the terminal. The red colored 4 is the result corresponding to the output above.
   
@@ -94,7 +94,7 @@ This command runs the MGRIT method adopting 100 time steps, a refinement level o
 
 By typing
 
-**$ ./bin/xbraid_heatEquation_example -n \<INT\> -i \<INT\> -r \<INT\>**
+**$ ./bin/xbraid_heatEquation_example -n "INT" -i "INT" -r "INT"**
 
 one can obtain the results for different discretizations. It should be noted that this example makes use of an XML-file (heat2d_square_ibvp1.xml) which provides all the MGRIT and p-multigrid settings and should be adjusted accordingly. The table below shows the results for different values of p and h which can be reproduced in this example. Here, the red colored 9 is the result corresponding to the output above.
 
@@ -108,5 +108,6 @@ one can obtain the results for different discretizations. It should be noted tha
  
  [3]  R. Tielen, M. M&ouml;ller, C. Vuik, A Direct Projection to Low-Order Level for *p*-Multigrid Methods in Isogeometric Analysis, *Lecture  Notes  in  Computational Science and Engineering: Numerical Mathematics and Advanced Applications ENUMATH 2019*, 2021
   
- 
+## Contact 
+If you have any questions or remarks regarding this repository, please contact me: roeltielen@hotmail.com
  
